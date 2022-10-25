@@ -1,6 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include "Manito.h"
 #include "opcion_de_menu.h"
+#include "gestorPreguntas.h"
 using namespace sf;
 
 
@@ -54,6 +55,8 @@ int main(int argc, char *argv[]){
 		selector.dibujar(w);
 		w.display();
 	}
+	gestorPreguntas x;
+	x.tirarPreguntaAleatoria();
 	return 0;
 }
 
