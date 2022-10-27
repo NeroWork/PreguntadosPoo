@@ -2,14 +2,16 @@
 #include "Manito.h"
 #include "opcion_de_menu.h"
 #include "gestorPreguntas.h"
+#include <iostream>
+using namespace std;
 using namespace sf;
 
 
 
 
 
-
 int main(int argc, char *argv[]){
+	setlocale(LC_ALL, "spanish");
 	RenderWindow w(VideoMode(1200,600),"Parcial de calculo");
 	w.setFramerateLimit(60);
 	Texture t;

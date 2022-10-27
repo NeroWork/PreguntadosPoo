@@ -31,7 +31,7 @@ D) Dushanb
 E) Ciudad Vieja Zuisa 
 Rpta.: "C"
 PREGUNTA 5: 
-¿Quien pinto “La Ultima Cena”? 
+¿Quien pinto "La Ultima Cena"? 
 A) Bernardo Bitti 
 B) Leonardo Dicaprio 
 C) Leonardo da Vinci 
@@ -39,7 +39,7 @@ D) Angelino Medoro
 E) Anhy Medoro 
 Rpta.: "C"  
 PREGUNTA 6: 
-El autor de la novela “Cinco Esquinas” es el escritor… 
+El autor de la novela "Cinco Esquinas" es el escritor… 
 A) Mario Vargas Llosa. 
 B) Abraham Valdelomar. 
 C) Jose Eduardo Eielson. 
@@ -119,7 +119,7 @@ D) El Mas Alla
 E) Universo
 Rpta.: "E"
 PREGUNTA 16: 
-¿Que rey frances es llamado “el Rey Sol”? 
+¿Que rey frances es llamado "el Rey Sol"? 
 A) Luis XIII de Francia. 
 B) Luis XIV de Francia. 
 C) Luis XV de Francia. 
@@ -132,7 +132,7 @@ A) Sinchi Capac.
 B) Huayna Capac. 
 C) Pachacutec. 
 D) Manco Inca. 
-E) Manco Capac
+E) Manco Capac.
 Rpta.: "E"
 PREGUNTA 18:
 Cual de las siguientes obras fue escrita por el escritor Mario Vargas Llosa (Premio Nobel de Literatura 2011)? 
@@ -143,7 +143,7 @@ D) Matalache.
 E) Rimac el Tierno 
 Rpta.: "A"
 PREGUNTA 19:
-El autor de la obra: “Tradiciones Peruanas”, fue escrito por… ? 
+El autor de la obra: "Tradiciones Peruanas", fue escrito por… ? 
 A) Jose Maria Arguedas. 
 B) Jose Santos Chocano. 
 C) Mario Palma. 
@@ -167,7 +167,7 @@ D) Johannes Kepler
 E) Pedro Paulet
 Rpta.: "C"
 PREGUNTA 22: 
-El autor del libro historico literario “Los Comentarios Reales de los Incas, que trata sobre la historia, las costumbres y las tradiciones del Antiguo Peru, es: 
+El autor del libro historico literario "Los Comentarios Reales de los Incas, que trata sobre la historia, las costumbres y las tradiciones del Antiguo Peru, es: 
 A) Juan de Santa Cruz Pachacuti. 
 B) Inca Garcilaso de la Vega. 
 C) Blas Valera. 
@@ -263,7 +263,7 @@ D) Actor.
 E) Fisico 
 Rpta.: "B"
 PREGUNTA 34: 
- “Cien Años de Soledad” es el titulo de una novela del escritor: 
+ "Cien Años de Soledad" es el titulo de una novela del escritor: 
 A) Gabriel Garcia Marquez. 
 B) Juan Rulfo. 
 C) Pablo Neruda. 
@@ -279,7 +279,7 @@ D) Porque se ubica el Cañon del Colca.
 E) Porque se ubica el Canal de Panama.  
 Rpta.: "E"
 PREGUNTA 36:
-¿Quien pinto “La Maja Desnuda”? 
+¿Quien pinto "La Maja Desnuda"? 
 A) Salvador Dali 
 B) Francisco de Goya 
 C) Pablo Picasso 
@@ -319,7 +319,7 @@ D) Transatlantico Titanic.
 E) El primer PC 
 Rpta.: "B"
 PREGUNTA 41:
-¿Quien es el autor de “Los Miserables”? 
+¿Quien es el autor de "Los Miserables"? 
 A) Vito Paez 
 B) Dante Alighieri 
 C) Fedor Dostoievski 
@@ -336,14 +336,14 @@ E) NINI
 Rpta.: "A"
 PREGUNTA 43: 
 Indique la relacion correcta con respecto a los gobernantes: 
-A) Bill Clinton – Gran Bretaña. 
-B) Felipe VI – Noruega. 
-C) Erdogan – Siria. 
-D) Vladimir Putin – Rusia. 
-E) Hillari Clinton – EEUU
+A) Bill Clinton y Gran Bretaña. 
+B) Felipe VI y Noruega. 
+C) Erdogan y Siria. 
+D) Vladimir Putin y Rusia. 
+E) Hillari Clinton y EEUU
 Rpta.: "D"
 PREGUNTA 44:  
-“El Hombre del Vitruvio” es un famoso dibujo acompañado de notas anatomicas realizadas alrededor del año 1490 por: 
+"El Hombre del Vitruvio" es un famoso dibujo acompañado de notas anatomicas realizadas alrededor del año 1490 por: 
 A) Rafael Sanzio 
 B) Miguel Angel Bounarotti 
 C) Leonardo Galileo
@@ -361,10 +361,10 @@ Rpta.: "D"
 PREGUNTA 46: 
 ¿Cual de las siguientes relaciones entre premios nobel y descubrimiento, es incorrecta 
 A) Albert Einstein - Ley del efecto fotoelectrico. 
-B) Marie Curie – Aislamiento del uranio 
-C) Alexander Fleming – Descubrimiento de la penicilina 
+B) Marie Curie - Aislamiento del uranio 
+C) Alexander Fleming - Descubrimiento de la penicilina 
 D) Richard Ernst - Espectroscopia RMN 
-E) Syukuro Manabe-Modelado fisico del clima terrestre
+E) Syukuro Manabe - Modelado fisico del clima terrestre
 Rpta.: "B"
 PREGUNTA 47: 
 En que lugar se celebra la ceremonia oficial de entrega de los premios Nobel cada 10 de diciembre? 
@@ -439,7 +439,7 @@ D) 1955
 E) 1978 
 Rpta.: "C"
 PREGUNTA 56: 
-El Cid lo vencio y le arrebato la famosa espada “Colada” 
+El Cid lo vencio y le arrebato la famosa espada "Colada" 
 A) Rey Bucar 
 B) Ramon de Berenguer 
 C) Almutamiz 
@@ -503,7 +503,7 @@ D) La Liga de las Naciones.
 E) La ONU
 Rpta.: "B"
 PREGUNTA 64: 
-El “Contrato Social” fue escrita por 
+El "Contrato Social" fue escrita por 
 A) Rousseau 
 B) Montesquieu 
 C) Voltaire 
@@ -559,7 +559,7 @@ D) Revolucion Cubana.
 E) Segunda Guerra Mundial. 
 Rpta.: "E"
 PREGUNTA 71: 
-El lanzamiento de la bomba atomica sobre Hiroshima fue ordenada por el presidente ……... de Estados Unidos. 
+El lanzamiento de la bomba atomica sobre Hiroshima fue ordenada por el presidente ... de Estados Unidos. 
 A) John F. Kennedy. 
 B) Harry Truman. 
 C) Franklin Roosevelt. 
@@ -575,7 +575,7 @@ D) Teoria del estado supremo.
 E) Teoria del espacio vital. 
 Rpta.: "E" 
 PREGUNTA 73: 
-En la segunda guerra mundial, que paises formaron las “fuerzas aliadas”. 
+En la segunda guerra mundial, que paises formaron las "fuerzas aliadas". 
 A) EE.UU. – Francia – España – Rusia. 
 B) Inglaterra – Rusia – EE.UU. – Italia. 
 C) Francia – EE.UU. – Inglaterra – Rusia. 
@@ -615,7 +615,7 @@ D) Julio Ruiz de Alda
 E) Adolfo Hitler 
 Rpta.: "E"
 PREGUNTA 78:  
-Fue una institucion encargada de castigar a quienes cometen delitos contra la fe, es decir a los protestantes, hechiceros, “pecadores publicos”, etc. Se denomina: 
+Fue una institucion encargada de castigar a quienes cometen delitos contra la fe, es decir a los protestantes, hechiceros, "pecadores publicos", etc. Se denomina: 
 A) La Divina Sancion. 
 B) La Real Audiencia. 
 C) El Congreso de la Republica. 
@@ -663,7 +663,7 @@ D) Epirogenesis.
 E) Orogenesis. 
 Rpta.: "E"
 PREGUNTA 84:
-“Asentamiento de poblacion con atribuciones y funciones politico administrativas, economicas y religiosas”. Esta definicion corresponde a... 
+"Asentamiento de poblacion con atribuciones y funciones politico administrativas, economicas y religiosas". Esta definicion corresponde a... 
 A) desierto. 
 B) Asentamiento Lunar
 C) selva. 
@@ -703,7 +703,7 @@ D) Deterioro de la calidad de las aguas continentales.
 E) Aumento de los rayos solares
 Rpta.: "A"
 PREGUNTA 89:
-Si aumenta la poblacion, el medio ambiente se vera afectado inmediatamente por… 
+Si aumenta la poblacion, el medio ambiente se vera afectado inmediatamente por: 
 A) los viajes espaciales. 
 B) la cantidad de basura. 
 C) la produccion de alimentos. 

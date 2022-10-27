@@ -12,7 +12,7 @@ Manito::Manito() {
 
 void Manito::Mover_pabajo ( ) {
 	if(relojin.getElapsedTime().asSeconds()>0.01){
-		y=y+1;
+		y=y+2;
 		s_manito.setPosition(x,y);
 		relojin.restart();
 	}
@@ -24,7 +24,7 @@ w.draw(s_manito);
 
 void Manito::Mover_parriba ( ) {
 	if(relojin.getElapsedTime().asSeconds()>0.01){
-		y=y-1;
+		y=y-2;
 		s_manito.setPosition(x,y);
 		relojin.restart();
 	}
@@ -32,7 +32,7 @@ void Manito::Mover_parriba ( ) {
 
 void Manito::Mover_paderecha ( ) {
 	if(relojin.getElapsedTime().asSeconds()>0.01){
-		x=x+1;
+		x=x+2;
 		s_manito.setPosition(x,y);
 		relojin.restart();
 	}
@@ -40,7 +40,7 @@ void Manito::Mover_paderecha ( ) {
 
 void Manito::Mover_paizquierda ( ) {
 	if(relojin.getElapsedTime().asSeconds()>0.01){
-		x=x-1;
+		x=x-2;
 		s_manito.setPosition(x,y);
 		relojin.restart();
 	}

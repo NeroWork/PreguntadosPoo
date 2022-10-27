@@ -23,6 +23,7 @@ public:
 	void agregarOpcionD(string x);
 	void agregarOpcionE(string x);
 	int getNroPregunta();
+	string corregir(string x);
 	void coutTodo();
 };
 
