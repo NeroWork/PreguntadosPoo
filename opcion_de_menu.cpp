@@ -5,9 +5,8 @@
 #include <SFML/Graphics/Font.hpp>
 
 opcion_de_menu::opcion_de_menu() {
-	Vector2f tam(200.f,60.f);
-	m_rectangulin.setSize(tam);
-	Color colorcin(0,0,255);
+	Vector2f tamanio_de_rectangulo(200.f,60.f);
+	m_rectangulin.setSize(tamanio_de_rectangulo);
 	m_rectangulin.setFillColor({0,0,50});
 	m_rectangulin.setOrigin(100,30);
 	m_rectangulin.setPosition(600,300);

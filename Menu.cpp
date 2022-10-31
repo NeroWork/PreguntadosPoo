@@ -5,7 +5,7 @@
 
 Menu::Menu() {
 	//Fondo de Pantalla Menu
-	Fondo_Principal.loadFromFile("maxresdefault.jpg");
+	Fondo_Principal.loadFromFile("fondo1.png");
 	Sprite_Principal.setTexture(Fondo_Principal);
 	Sprite_Principal.setPosition(0, 0);
 	
