@@ -15,7 +15,10 @@ public:
 	void Mover_parriba();
 	void Mover_paderecha();
 	void Mover_paizquierda();
-	void dibujar(RenderWindow &w);
+	Vector2f Posicion_manito();
+	Vector2f Tamano_textura();
+	void dibujar(RenderWindow &ventanita);
+	void Mover_por_mouse(RenderWindow &ventanita);
 };
 
 #endif

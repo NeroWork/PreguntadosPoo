@@ -2,10 +2,11 @@
 #include <SFML/Window/Keyboard.hpp>
 #include "Juego.h"
 #include "VerRanking.h"
+#include "Manito.h"
 
 Menu::Menu() {
 	//Fondo de Pantalla Menu
-	Fondo_Principal.loadFromFile("fondo1.png");
+	Fondo_Principal.loadFromFile("FondoFantasia2.jpg");
 	Sprite_Principal.setTexture(Fondo_Principal);
 	Sprite_Principal.setPosition(0, 0);
 	
@@ -28,8 +29,14 @@ Menu::Menu() {
 }
 
 void Menu::Actualizar (Juego & J) {
-	if(Keyboard::isKeyPressed(Keyboard::Space)){
+	if(Mouse::isButtonPressed(Mouse::Left)){
+		Vector2i posicion_mouse=Mouse::getPosition(J.ventanita);
+		posicion_mouse=(Vector2i)J.ventanita.mapPixelToCoords(posicion_mouse);
+		FloatRect posicion_manito(Vector2f(posicion_mouse),menu_manito.Tamano_textura());
+		
+		if(textito.getGlobalBounds().intersects(posicion_manito)){
 		J.Cambiar_Escena(new VerRanking);
+		}
 	}
 }
 
