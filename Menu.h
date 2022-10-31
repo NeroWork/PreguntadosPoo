@@ -19,9 +19,10 @@ private:
 	Font Fuentecita;
 	FloatRect m_r_textin;
 	Manito menu_manito;
+	Clock relojin;
 public:
 	Menu();
-	void Actualizar (Juego & J);
+	void Actualizar (Juego &J, RenderWindow &ventanita);
 	void Dibujar (RenderWindow & ventanita);
 };
 

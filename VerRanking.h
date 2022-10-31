@@ -11,9 +11,10 @@ private:
 	Text textito;
 	Font Fuentecita;
 	FloatRect m_r_textin;
+	Clock relojin;
 public:
 	VerRanking();
-	void Actualizar (Juego & J);
+	void Actualizar (Juego & J, RenderWindow &ventanita);
 	void Dibujar (RenderWindow & ventanita);
 };
 

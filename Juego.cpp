@@ -23,7 +23,7 @@ void Juego::Jugar ( ) {
 		
 		ventanita.clear(Color(255,255,255,255));
 		
-		esc_actual -> Actualizar(*this);
+		esc_actual -> Actualizar(*this, ventanita);
 		esc_actual -> Dibujar(ventanita);
 		w_manito.dibujar(ventanita);
 		w_manito.Mover_por_mouse(ventanita);

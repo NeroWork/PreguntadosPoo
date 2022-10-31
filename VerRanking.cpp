@@ -24,10 +24,11 @@ VerRanking::VerRanking() {
 	m_r_textin = textito.getLocalBounds();
 	textito.setOrigin(m_r_textin.width/2,m_r_textin.height/2);
 	textito.setPosition(600,300);
+	relojin.restart();
 }
 
-void VerRanking::Actualizar (Juego & J) {
-	if(Keyboard::isKeyPressed(Keyboard::Escape)){
+void VerRanking::Actualizar (Juego & J, RenderWindow &ventanita) {
+	if(Keyboard::isKeyPressed(Keyboard::Escape) and relojin.getElapsedTime().asSeconds() > 0.5){
 		J.Cambiar_Escena(new Menu);
 	}
 }

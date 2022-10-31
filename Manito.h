@@ -7,16 +7,10 @@ using namespace sf;
 class Manito {
 	Texture t_manito;
 	Sprite s_manito;
-	int x,y;
-    Clock relojin;
 public:
 	Manito();
-	void Mover_pabajo();
-	void Mover_parriba();
-	void Mover_paderecha();
-	void Mover_paizquierda();
 	Vector2f Posicion_manito();
-	Vector2f Tamano_textura();
+	FloatRect get_size();
 	void dibujar(RenderWindow &ventanita);
 	void Mover_por_mouse(RenderWindow &ventanita);
 };

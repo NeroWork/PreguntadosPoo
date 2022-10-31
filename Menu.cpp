@@ -6,7 +6,7 @@
 
 Menu::Menu() {
 	//Fondo de Pantalla Menu
-	Fondo_Principal.loadFromFile("FondoFantasia2.jpg");
+	Fondo_Principal.loadFromFile("fondo1.png");
 	Sprite_Principal.setTexture(Fondo_Principal);
 	Sprite_Principal.setPosition(0, 0);
 	
@@ -26,17 +26,22 @@ Menu::Menu() {
 	m_r_textin = textito.getLocalBounds();
 	textito.setOrigin(m_r_textin.width/2,m_r_textin.height/2);
 	textito.setPosition(600,300);
+	
+	relojin.restart();
 }
 
-void Menu::Actualizar (Juego & J) {
+void Menu::Actualizar (Juego & J, RenderWindow &ventanita) {
 	if(Mouse::isButtonPressed(Mouse::Left)){
 		Vector2i posicion_mouse=Mouse::getPosition(J.ventanita);
 		posicion_mouse=(Vector2i)J.ventanita.mapPixelToCoords(posicion_mouse);
-		FloatRect posicion_manito(Vector2f(posicion_mouse),menu_manito.Tamano_textura());
+		FloatRect posicion_manito(Vector2f(posicion_mouse),Vector2f(1,1));
 		
 		if(textito.getGlobalBounds().intersects(posicion_manito)){
 		J.Cambiar_Escena(new VerRanking);
 		}
+	}
+	if(Keyboard::isKeyPressed(Keyboard::Escape) and relojin.getElapsedTime().asSeconds() > 0.5 ){
+		ventanita.close();
 	}
 }
 

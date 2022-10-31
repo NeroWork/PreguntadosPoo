@@ -8,7 +8,7 @@ class Juego;
 class Escena {
 public:
 	Escena();
-	virtual void Actualizar(Juego &J) = 0;
+	virtual void Actualizar(Juego &J, RenderWindow &ventanita) = 0;
 	virtual void Dibujar(RenderWindow &ventanita) = 0;
 };
 
