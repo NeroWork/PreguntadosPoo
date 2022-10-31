@@ -4,6 +4,7 @@
 Juego::Juego(Escena *EscenaInicio) : ventanita(VideoMode(1200,600),"PreguntadosPoo") {
 	ventanita.setFramerateLimit(60);
 	esc_actual = EscenaInicio;
+	ventanita.setMouseCursorVisible(false);
 }
 
 
@@ -24,6 +25,8 @@ void Juego::Jugar ( ) {
 		
 		esc_actual -> Actualizar(*this);
 		esc_actual -> Dibujar(ventanita);
+		w_manito.dibujar(ventanita);
+		w_manito.Mover_por_mouse(ventanita);
 		
 		if(esc_siguiente){
 			delete esc_actual;

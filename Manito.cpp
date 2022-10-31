@@ -1,6 +1,7 @@
 #include "Manito.h"
 #include <SFML/Graphics/Sprite.hpp>
-
+#include <SFML/System/Vector2.hpp>
+using namespace sf;
 Manito::Manito() {
 	x=600;
 	y=300;
@@ -8,6 +9,11 @@ Manito::Manito() {
 	s_manito.setTexture(t_manito);
 	s_manito.setPosition(x,y);
 	s_manito.setScale(0.1,0.1);
+}
+
+void Manito::Mover_por_mouse(RenderWindow &ventanita){
+	Vector2f Posicion_mouse=Vector2f(Mouse::getPosition(ventanita));
+	s_manito.setPosition(Posicion_mouse);
 }
 
 void Manito::Mover_pabajo ( ) {
@@ -18,8 +24,8 @@ void Manito::Mover_pabajo ( ) {
 	}
 }
 
-void Manito::dibujar(RenderWindow &w){
-w.draw(s_manito);
+void Manito::dibujar(RenderWindow &ventanita){
+ventanita.draw(s_manito);
 }
 
 void Manito::Mover_parriba ( ) {
@@ -46,3 +52,10 @@ void Manito::Mover_paizquierda ( ) {
 	}
 }
 
+Vector2f Manito::Posicion_manito(){
+	return Vector2f(s_manito.getPosition());
+}
+
+Vector2f Manito::Tamano_textura(){
+	return Vector2f(t_manito.getSize());
+}
