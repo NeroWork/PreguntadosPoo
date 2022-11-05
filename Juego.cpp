@@ -1,7 +1,7 @@
 #include "Juego.h"
 #include <SFML/Window/Event.hpp>
 
-Juego::Juego(Escena *EscenaInicio) : ventanita(VideoMode(1200,600),"PreguntadosPoo") {
+Juego::Juego(Escena *EscenaInicio) : ventanita(VideoMode((*((VideoMode::getFullscreenModes()).begin())).width,(*((VideoMode::getFullscreenModes()).begin())).height),"PreguntadosPoo", Style::Fullscreen) {
 	ventanita.setFramerateLimit(60);
 	esc_actual = EscenaInicio;
 	ventanita.setMouseCursorVisible(false);
