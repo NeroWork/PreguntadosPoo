@@ -4,7 +4,7 @@
 
 VerRanking::VerRanking() {
 	//Fondo de Pantalla Menu
-	Fondo_Principal.loadFromFile("maxresdefault.jpg");
+	Fondo_Principal.loadFromFile("FondoRanking.jpeg");
 	Sprite_Principal.setTexture(Fondo_Principal);
 	Sprite_Principal.setPosition(0, 0);
 	
@@ -17,13 +17,13 @@ VerRanking::VerRanking() {
 	m_rectangulin.setPosition(600,300);
 	
 	//Texto que se encuentra dentro del rectangulo
-	textito.setString("RANKING UWUUUU");
+	/*textito.setString("RANKING UWUUUU");
 	Fuentecita.loadFromFile("LibreBaskerville-Regular.ttf");
 	textito.setFont(Fuentecita);
 	textito.setCharacterSize(30);
 	m_r_textin = textito.getLocalBounds();
 	textito.setOrigin(m_r_textin.width/2,m_r_textin.height/2);
-	textito.setPosition(600,300);
+	textito.setPosition(600,300);*/
 }
 
 void VerRanking::Actualizar (Juego & J) {
