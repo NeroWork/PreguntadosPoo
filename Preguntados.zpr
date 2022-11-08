@@ -43,7 +43,7 @@ path=Escena.cpp
 cursor=0:0
 [source]
 path=Menu.cpp
-cursor=55:62
+cursor=58:26
 open=true
 [source]
 path=VerRanking.cpp
@@ -70,7 +70,7 @@ path=Escena.h
 cursor=10:58
 [header]
 path=Menu.h
-cursor=16:42
+cursor=15:39
 open=true
 [header]
 path=VerRanking.h
