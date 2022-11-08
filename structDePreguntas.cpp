@@ -83,3 +83,26 @@ string structDePreguntas::corregir (string x) {
 	return x;
 }
 
+string structDePreguntas::verOpcionA(){
+	return OpcionA;
+}
+
+string structDePreguntas::verOpcionB(){
+	return OpcionB;
+}
+
+string structDePreguntas::verOpcionC(){
+	return OpcionC;
+}
+
+string structDePreguntas::verOpcionD(){
+	return OpcionD;
+}
+
+string structDePreguntas::verOpcionE(){
+	return OpcionE;
+}
+
+string structDePreguntas::verRespuesta(){
+	return Respuesta;
+}

@@ -6,6 +6,7 @@
 #include <SFML/System/Time.hpp>
 #include <ctime>
 #include <iostream>
+#include <iterator>
 using namespace std;
 
 gestorPreguntas::gestorPreguntas() {
@@ -38,6 +39,7 @@ gestorPreguntas::gestorPreguntas() {
 void gestorPreguntas::tirarPreguntaAleatoria ( ) {
 	srand(time(NULL));
 	int nroEntre1Y99 = (rand()%99) + 1;
+	posicion_Pregunta=nroEntre1Y99;
 	for (auto x : listaDePreguntas){
 		if(x.getNroPregunta() == nroEntre1Y99){
 			x.coutTodo();
@@ -45,3 +47,38 @@ void gestorPreguntas::tirarPreguntaAleatoria ( ) {
 	}
 }
 
+string gestorPreguntas::tirar_OpcionA(){
+	auto it=listaDePreguntas.begin();
+	advance(it,posicion_Pregunta);
+	return it->verOpcionA();
+}
+
+string gestorPreguntas::tirar_OpcionB(){
+	auto it=listaDePreguntas.begin();
+	advance(it,posicion_Pregunta);
+	return it->verOpcionB();
+}
+
+string gestorPreguntas::tirar_OpcionC(){
+	auto it=listaDePreguntas.begin();
+	advance(it,posicion_Pregunta);
+	return it->verOpcionC();
+}
+
+string gestorPreguntas::tirar_OpcionD(){
+	auto it=listaDePreguntas.begin();
+	advance(it,posicion_Pregunta);
+	return it->verOpcionD();
+}
+
+string gestorPreguntas::tirar_OpcionE(){
+	auto it=listaDePreguntas.begin();
+	advance(it,posicion_Pregunta);
+	return it->verOpcionE();
+}
+
+string gestorPreguntas::tirar_Respuesta(){
+	auto it=listaDePreguntas.begin();
+	advance(it,posicion_Pregunta);
+	return it->verRespuesta();
+}

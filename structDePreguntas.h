@@ -25,6 +25,12 @@ public:
 	int getNroPregunta();
 	string corregir(string x);
 	void coutTodo();
+	string verOpcionA();
+	string verOpcionB();
+	string verOpcionC();
+	string verOpcionD();
+	string verOpcionE();
+	string verRespuesta();
 };
 
 #endif
