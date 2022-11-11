@@ -27,7 +27,6 @@ private:
 	FloatRect m_r_textin;
 	Clock relojin;
 	Partida partiditaPa;
-	int AnchoPantalla;
 public:
 	VerRanking();
 	void Actualizar (Juego & J, RenderWindow &ventanita);

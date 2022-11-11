@@ -15,7 +15,7 @@ VerRanking::VerRanking() {
 		getline(archi,champions.puntos2);
 		getline(archi,champions.player3);
 		getline(archi,champions.puntos3);
-	}{
+	}else{
 		cout<<"No lo tenes abierto pa"<<endl;
 	};
 	archi.close();
@@ -24,35 +24,42 @@ VerRanking::VerRanking() {
 	Sprite_Principal.setTexture(Fondo_Principal);
 	Sprite_Principal.setPosition(0, 0);
 	
+	FloatRect tamFondo = Sprite_Principal.getLocalBounds();
+	float anchoPantalla = (*((VideoMode::getFullscreenModes()).begin())).width;
+	float altoPantalla = (*((VideoMode::getFullscreenModes()).begin())).height;
+	float scaleX = anchoPantalla/tamFondo.width;
+	float scaleY = altoPantalla/tamFondo.height;
+	Sprite_Principal.scale(scaleX, scaleY);
+	
 	//Texto que se encuentra dentro del rectangulo
-	primeroRAnking.setString("RANKING UWUUUU");
+	primeroRAnking.setString(champions.player1);
 	Fuentecita.loadFromFile("LibreBaskerville-Regular.ttf");
 	primeroRAnking.setFont(Fuentecita);
 	primeroRAnking.setCharacterSize(60);
 	primeroRAnking.setFillColor(Color(145,0,123,255));
 	m_r_textin = primeroRAnking.getLocalBounds();
 	primeroRAnking.setOrigin(m_r_textin.width/2,m_r_textin.height/2);
-	primeroRAnking.setPosition(600,300);
+	primeroRAnking.setPosition(anchoPantalla/2.003,altoPantalla/2.5);
 	relojin.restart();
 	
-	segundoRanking.setString("RANKING UWUUUU");
+	segundoRanking.setString(champions.player2);
 	Fuentecita.loadFromFile("LibreBaskerville-Regular.ttf");
 	segundoRanking.setFont(Fuentecita);
 	segundoRanking.setCharacterSize(60);
 	segundoRanking.setFillColor(Color(145,0,123,255));
 	m_r_textin = segundoRanking.getLocalBounds();
 	segundoRanking.setOrigin(m_r_textin.width/2,m_r_textin.height/2);
-	segundoRanking.setPosition(600,300);
+	segundoRanking.setPosition(anchoPantalla/2.001,altoPantalla/2.3);
 	relojin.restart();
 	
-	terceroRanking.setString("RANKING UWUUUU");
+	terceroRanking.setString(champions.player3);
 	Fuentecita.loadFromFile("LibreBaskerville-Regular.ttf");
 	terceroRanking.setFont(Fuentecita);
 	terceroRanking.setCharacterSize(60);
 	terceroRanking.setFillColor(Color(145,0,123,255));
 	m_r_textin = terceroRanking.getLocalBounds();
 	terceroRanking.setOrigin(m_r_textin.width/2,m_r_textin.height/2);
-	terceroRanking.setPosition(600,300);
+	terceroRanking.setPosition(anchoPantalla/2.010,altoPantalla/2);
 	relojin.restart();
 }
 
@@ -98,6 +105,8 @@ void VerRanking::Actualizar (Juego & J, RenderWindow &ventanita) {
 
 void VerRanking::Dibujar (RenderWindow & ventanita) {
 	ventanita.draw(Sprite_Principal);
-	//ventanita.draw(textito);
+	ventanita.draw(primeroRAnking);
+	ventanita.draw(segundoRanking);
+	ventanita.draw(terceroRanking);
 }
 
