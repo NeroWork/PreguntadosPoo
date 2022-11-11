@@ -24,23 +24,36 @@ VerRanking::VerRanking() {
 	Sprite_Principal.setTexture(Fondo_Principal);
 	Sprite_Principal.setPosition(0, 0);
 	
-	//Creacion del Rectangulo donde poner el mensaje
-	Vector2f tam(200.f,60.f);
-	m_rectangulin.setSize(tam);
-	Color colorcin(0,0,255);
-	m_rectangulin.setFillColor({0,0,50});
-	m_rectangulin.setOrigin(100,30);
-	m_rectangulin.setPosition(600,300);
-	
 	//Texto que se encuentra dentro del rectangulo
-	/*textito.setString("RANKING UWUUUU");
+	primeroRAnking.setString("RANKING UWUUUU");
 	Fuentecita.loadFromFile("LibreBaskerville-Regular.ttf");
-	textito.setFont(Fuentecita);
-	textito.setCharacterSize(30);
-	m_r_textin = textito.getLocalBounds();
-	textito.setOrigin(m_r_textin.width/2,m_r_textin.height/2);
-	textito.setPosition(600,300);
-	relojin.restart();*/
+	primeroRAnking.setFont(Fuentecita);
+	primeroRAnking.setCharacterSize(60);
+	primeroRAnking.setFillColor(Color(145,0,123,255));
+	m_r_textin = primeroRAnking.getLocalBounds();
+	primeroRAnking.setOrigin(m_r_textin.width/2,m_r_textin.height/2);
+	primeroRAnking.setPosition(600,300);
+	relojin.restart();
+	
+	segundoRanking.setString("RANKING UWUUUU");
+	Fuentecita.loadFromFile("LibreBaskerville-Regular.ttf");
+	segundoRanking.setFont(Fuentecita);
+	segundoRanking.setCharacterSize(60);
+	segundoRanking.setFillColor(Color(145,0,123,255));
+	m_r_textin = segundoRanking.getLocalBounds();
+	segundoRanking.setOrigin(m_r_textin.width/2,m_r_textin.height/2);
+	segundoRanking.setPosition(600,300);
+	relojin.restart();
+	
+	terceroRanking.setString("RANKING UWUUUU");
+	Fuentecita.loadFromFile("LibreBaskerville-Regular.ttf");
+	terceroRanking.setFont(Fuentecita);
+	terceroRanking.setCharacterSize(60);
+	terceroRanking.setFillColor(Color(145,0,123,255));
+	m_r_textin = terceroRanking.getLocalBounds();
+	terceroRanking.setOrigin(m_r_textin.width/2,m_r_textin.height/2);
+	terceroRanking.setPosition(600,300);
+	relojin.restart();
 }
 
 bool VerRanking::EnteroComparar(string campeonpts, int pts){
@@ -54,12 +67,15 @@ bool VerRanking::EnteroComparar(string campeonpts, int pts){
 void VerRanking::Actualizar (Juego & J, RenderWindow &ventanita) {
 	if(EnteroComparar(champions.puntos1,partiditaPa.verPuntosJugador())){
 		champions.player1="Player1: "+partiditaPa.verNombreUsuario();
+		champions.puntos1=partiditaPa.verNombreUsuario();
 	}else{
 		if(EnteroComparar(champions.puntos2,partiditaPa.verPuntosJugador())){
 			champions.player2="Player1: "+partiditaPa.verNombreUsuario();
+			champions.puntos2=partiditaPa.verNombreUsuario();
 		}else{
 			if(EnteroComparar(champions.puntos3,partiditaPa.verPuntosJugador())){
 				champions.player3="Player1: "+partiditaPa.verNombreUsuario();
+				champions.puntos3=partiditaPa.verNombreUsuario();
 			}
 		}
 	}
@@ -82,7 +98,6 @@ void VerRanking::Actualizar (Juego & J, RenderWindow &ventanita) {
 
 void VerRanking::Dibujar (RenderWindow & ventanita) {
 	ventanita.draw(Sprite_Principal);
-	ventanita.draw(m_rectangulin);
-	ventanita.draw(textito);
+	//ventanita.draw(textito);
 }
 

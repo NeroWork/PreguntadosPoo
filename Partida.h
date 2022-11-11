@@ -8,10 +8,10 @@ using namespace std;
 
 class Partida : public Escena {
 private:
-	string nombre_Usuario;
+	string nombre_Usuario="";
 	gestorPreguntas listita_Preguntas;
 	Text textito;
-	int cantidad_Correctas;
+	int cantidad_Correctas=0;
 public:
 	Partida();
 	void Actualizar (Juego & J, RenderWindow & ventanita);

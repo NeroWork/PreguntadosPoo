@@ -20,11 +20,14 @@ private:
 	Texture Fondo_Principal;
 	Sprite Sprite_Principal;
 	RectangleShape m_rectangulin;
-	Text textito;
+	Text primeroRAnking;
+	Text segundoRanking;
+	Text terceroRanking;
 	Font Fuentecita;
 	FloatRect m_r_textin;
 	Clock relojin;
 	Partida partiditaPa;
+	int AnchoPantalla;
 public:
 	VerRanking();
 	void Actualizar (Juego & J, RenderWindow &ventanita);
