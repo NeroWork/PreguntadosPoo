@@ -21,8 +21,11 @@ private:
 	Sprite Sprite_Principal;
 	RectangleShape m_rectangulin;
 	Text primeroRAnking;
+	Text primeroPuntos;
 	Text segundoRanking;
+	Text segundoPuntos;
 	Text terceroRanking;
+	Text terceroPuntos;
 	Font Fuentecita;
 	FloatRect m_r_textin;
 	Clock relojin;

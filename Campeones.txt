@@ -1,1 +1,6 @@
-Player1 10Player2 10Player3 30Player1 10Player2 10Player3 30
+Player1
+10
+Player2
+30
+Player3
+20
