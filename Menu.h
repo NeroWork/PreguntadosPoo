@@ -12,10 +12,9 @@
 
 class Menu : public Escena {
 private:
-	Texture Fondo_Principal;
-	Sprite Sprite_Principal;
-	RectangleShape m_rectangulin;
-	Text textito;
+	Texture Fondo_Principal, t_Presentador;
+	Sprite Sprite_Principal, s_Presentador;
+	Text textoIniciarPartida, textoVerRanking, textoLeo1, textoLeo2;
 	Font Fuentecita;
 	FloatRect m_r_textin;
 	Manito menu_manito;
