@@ -3,6 +3,8 @@
 #include "Juego.h"
 #include "VerRanking.h"
 #include "Manito.h"
+#include <iostream>
+using namespace std;
 
 Menu::Menu() {
 	//Fondo de Pantalla Menu

@@ -7,6 +7,7 @@
 using namespace std;
 
 VerRanking::VerRanking() {
+	cout<<"XD1"<<endl;
 	//Pasar del txt al struct los campeones
 	ifstream archi("Campeones.txt");
 	if(archi.is_open()){
@@ -31,32 +32,33 @@ VerRanking::VerRanking() {
 	float scaleX = anchoPantalla/tamFondo.width;
 	float scaleY = altoPantalla/tamFondo.height;
 	Sprite_Principal.scale(scaleX, scaleY);
-	
+	cout<<"XD2"<<endl;
 	//Textode los jugadores en el ranking y sus puntos
-	primeroRAnking.setString(champions.player1);
+	cout<<champions.player1<<endl;
+	string aux  = champions.player1;
+	primeroRAnking.setString(aux);
 	Fuentecita.loadFromFile("LibreBaskerville-Regular.ttf");
 	primeroRAnking.setFont(Fuentecita);
-	primeroRAnking.setCharacterSize(60);
+	primeroRAnking.setCharacterSize(80);
 	primeroRAnking.setFillColor(Color(145,0,123,255));
 	m_r_textin = primeroRAnking.getLocalBounds();
 	primeroRAnking.setOrigin(m_r_textin.width/2,m_r_textin.height/2);
-	primeroRAnking.setPosition(anchoPantalla/1.8,altoPantalla/3);
+	primeroRAnking.setPosition(anchoPantalla/1.95,altoPantalla/3.45);
 	relojin.restart();
 	
-	primeroPuntos.setString(champions.puntos1);
-	Fuentecita.loadFromFile("LibreBaskerville-Regular.ttf");
+	aux = champions.puntos1;
+	primeroPuntos.setString(aux);
 	primeroPuntos.setFont(Fuentecita);
 	primeroPuntos.setCharacterSize(60);
 	primeroPuntos.setFillColor(Color(145,0,123,255));
 	m_r_textin = primeroPuntos.getLocalBounds();
 	primeroPuntos.setOrigin(m_r_textin.width/2,m_r_textin.height/2);
-	primeroPuntos.setPosition(anchoPantalla/1.45,altoPantalla/3);
+	primeroPuntos.setPosition(anchoPantalla/1.445,altoPantalla/3.275);
 	relojin.restart();
 	
 	segundoRanking.setString(champions.player2);
-	Fuentecita.loadFromFile("LibreBaskerville-Regular.ttf");
 	segundoRanking.setFont(Fuentecita);
-	segundoRanking.setCharacterSize(60);
+	segundoRanking.setCharacterSize(80);
 	segundoRanking.setFillColor(Color(145,0,123,255));
 	m_r_textin = segundoRanking.getLocalBounds();
 	segundoRanking.setOrigin(m_r_textin.width/2,m_r_textin.height/2);
@@ -64,7 +66,6 @@ VerRanking::VerRanking() {
 	relojin.restart();
 	
 	segundoPuntos.setString(champions.puntos2);
-	Fuentecita.loadFromFile("LibreBaskerville-Regular.ttf");
 	segundoPuntos.setFont(Fuentecita);
 	segundoPuntos.setCharacterSize(60);
 	segundoPuntos.setFillColor(Color(145,0,123,255));
@@ -74,23 +75,24 @@ VerRanking::VerRanking() {
 	relojin.restart();
 
 	terceroRanking.setString(champions.player3);
-	Fuentecita.loadFromFile("LibreBaskerville-Regular.ttf");
 	terceroRanking.setFont(Fuentecita);
-	terceroRanking.setCharacterSize(60);
+	terceroRanking.setCharacterSize(80);
 	terceroRanking.setFillColor(Color(145,0,123,255));
 	m_r_textin = terceroRanking.getLocalBounds();
 	terceroRanking.setOrigin(m_r_textin.width/2,m_r_textin.height/2);
 	terceroRanking.setPosition(anchoPantalla/1.8,altoPantalla/1.25);
 	relojin.restart();
 	
-	terceroPuntos.setString(champions.puntos3);
-	Fuentecita.loadFromFile("LibreBaskerville-Regular.ttf");
+	
+	aux = champions.puntos3;
+	terceroPuntos.setString(aux);
 	terceroPuntos.setFont(Fuentecita);
 	terceroPuntos.setCharacterSize(60);
 	terceroPuntos.setFillColor(Color(145,0,123,255));
 	m_r_textin = terceroPuntos.getLocalBounds();
 	terceroPuntos.setOrigin(m_r_textin.width/2,m_r_textin.height/2);
 	terceroPuntos.setPosition(anchoPantalla/1.45,altoPantalla/1.25);
+	
 	relojin.restart();
 }
 
