@@ -7,7 +7,6 @@
 using namespace std;
 
 VerRanking::VerRanking() {
-	cout<<"XD1"<<endl;
 	//Pasar del txt al struct los campeones
 	ifstream archi("Campeones.txt");
 	if(archi.is_open()){
@@ -18,7 +17,7 @@ VerRanking::VerRanking() {
 		getline(archi,champions.player3);
 		getline(archi,champions.puntos3);
 	}else{
-		cout<<"No lo tenes abierto pa"<<endl;
+		cout<<"No lo tenes abierto"<<endl;
 	};
 	archi.close();
 	//Fondo de Pantalla ranking
@@ -32,9 +31,7 @@ VerRanking::VerRanking() {
 	float scaleX = anchoPantalla/tamFondo.width;
 	float scaleY = altoPantalla/tamFondo.height;
 	Sprite_Principal.scale(scaleX, scaleY);
-	cout<<"XD2"<<endl;
 	//Textode los jugadores en el ranking y sus puntos
-	cout<<champions.player1<<endl;
 	string aux  = champions.player1;
 	primeroRAnking.setString(aux);
 	Fuentecita.loadFromFile("LibreBaskerville-Regular.ttf");
@@ -134,7 +131,7 @@ void VerRanking::Actualizar (Juego & J, RenderWindow &ventanita) {
 	archi<<champions.player3<<endl;
 	archi<<champions.puntos3<<endl;
 	}else{
-		cout<<"No esta abierto pa"<<endl;
+		cout<<"No esta abierto"<<endl;
 	}
 	archi.close();
 	if(Keyboard::isKeyPressed(Keyboard::Escape) and relojin.getElapsedTime().asSeconds() > 0.5){
