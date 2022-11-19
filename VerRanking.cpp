@@ -93,47 +93,7 @@ VerRanking::VerRanking() : partiditaPa("x") {
 	relojin.restart();
 }
 
-//Funcion para comparar los puntos del nuevo jugador y los campeones
-bool VerRanking::EnteroComparar(string campeonpts, int pts){
-	stringstream cambiador;
-	cambiador<<campeonpts<<endl;
-	int championpts;
-	cambiador>>championpts;
-	return championpts<pts;
-	
-}
-
 void VerRanking::Actualizar (Juego & J, RenderWindow &ventanita) {
-	//Ver si el nuevo jugador entra en el ranking
-	if(EnteroComparar(champions.puntos1,partiditaPa.verPuntosJugador())){
-		champions.player1=partiditaPa.verNombreUsuario();
-		champions.puntos1=partiditaPa.verPuntosJugador();
-	}else{
-		if(EnteroComparar(champions.puntos2,partiditaPa.verPuntosJugador())){
-			champions.player2=partiditaPa.verNombreUsuario();
-			champions.puntos2=partiditaPa.verPuntosJugador();
-		}else{
-			if(EnteroComparar(champions.puntos3,partiditaPa.verPuntosJugador())){
-				champions.player3=partiditaPa.verNombreUsuario();
-				champions.puntos3=partiditaPa.verPuntosJugador();
-			}
-		}
-	}
-	
-	//Pasar de nuevo los campeones al txt
-	ofstream archi("Campeones.txt");
-	if(archi.is_open()){
-	archi.clear();
-	archi<<champions.player1<<endl;
-	archi<<champions.puntos1<<endl;
-	archi<<champions.player2<<endl;
-	archi<<champions.puntos2<<endl;
-	archi<<champions.player3<<endl;
-	archi<<champions.puntos3<<endl;
-	}else{
-		cout<<"No esta abierto"<<endl;
-	}
-	archi.close();
 	if(Keyboard::isKeyPressed(Keyboard::Escape) and relojin.getElapsedTime().asSeconds() > 0.5){
 		J.Cambiar_Escena(new Menu);
 	}

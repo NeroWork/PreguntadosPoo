@@ -14,8 +14,19 @@ private:
 	Sprite Sprite_Principal;
 	float anchoPantalla, altoPantalla;
 	
+	//Cosas del ranking
+	struct losCampeones{
+		string player1;
+		string puntos1;
+		string player2;
+		string puntos2;
+		string player3;
+		string puntos3;
+	};
+	losCampeones champions;
+	
 	//textos del menu;
-	Text tiempo;
+	Text tiempo, text_cant_correctas, text_vidas;
 	Font Fuentecita;
 	FloatRect m_r_textin;
 	
@@ -35,8 +46,8 @@ private:
 	string nombre_Usuario;
 	gestorPreguntas gp;
 	structDePreguntas preguntaActual;
-	Text textito;
-	int cantidad_Correctas=0;
+	int cantidad_Correctas=0, vidas = 3;
+	bool derrotado = false;
 public:
 	Partida(string nombreUsuario);
 	void Actualizar (Juego & J, RenderWindow & ventanita);
@@ -45,6 +56,10 @@ public:
 	void inicializarPregunta();
 	void OrdenarOpciones();
 	void wrapear();
+	void nuevaPregunta();
+	void Perder();
+	bool EnteroComparar(string campeonpts, int pts);
+	void elegirOpcion(string OpcionElegida);
 	string verNombreUsuario();
 };
 
