@@ -6,21 +6,26 @@
 #include "Partida.h"
 using namespace std;
 
-struct losCampeones{
-	string player1;
-	string puntos1;
-	string player2;
-	string puntos2;
-	string player3;
-	string puntos3;
-};
-
 class VerRanking : public Escena {
 private:
+	struct losCampeones{
+		string player1;
+		string puntos1;
+		string player2;
+		string puntos2;
+		string player3;
+		string puntos3;
+	};
 	losCampeones champions;
 	Texture Fondo_Principal;
 	Sprite Sprite_Principal;
-	Text textito;
+	RectangleShape m_rectangulin;
+	Text primeroRAnking;
+	Text primeroPuntos;
+	Text segundoRanking;
+	Text segundoPuntos;
+	Text terceroRanking;
+	Text terceroPuntos;
 	Font Fuentecita;
 	FloatRect m_r_textin;
 	Clock relojin;

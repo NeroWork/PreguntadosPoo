@@ -12,9 +12,6 @@ int main(int argc, char *argv[]){
 	
 	Juego Proyecto(new Menu);
 	Proyecto.Jugar();
-	
-	gestorPreguntas x;
-	x.tirarPreguntaAleatoria();
 	return 0;
 }
 

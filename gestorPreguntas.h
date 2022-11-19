@@ -7,7 +7,9 @@ using namespace std;
 
 class gestorPreguntas {
 	list<structDePreguntas> listaDePreguntas;
+	structDePreguntas pregunta_Actual;
 	int posicion_Pregunta;
+	int cantidad_preguntas;
 public:
 	gestorPreguntas();
 	void tirarPreguntaAleatoria();
@@ -17,6 +19,7 @@ public:
 	string tirar_OpcionD();
 	string tirar_OpcionE();
 	string tirar_Respuesta();
+	structDePreguntas getPreguntaActual();
 private:
 };
 

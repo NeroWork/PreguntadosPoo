@@ -9,6 +9,7 @@
 #include <SFML/Graphics/Rect.hpp>
 #include "Manito.h"
 #include "Menu.h"
+#include "gestorPreguntas.h"
 
 class Menu : public Escena {
 private:
