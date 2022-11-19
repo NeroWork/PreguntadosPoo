@@ -106,3 +106,8 @@ string structDePreguntas::verOpcionE(){
 string structDePreguntas::verRespuesta(){
 	return Respuesta;
 }
+
+string structDePreguntas::verPregunta ( ) {
+	return Pregunta;
+}
+

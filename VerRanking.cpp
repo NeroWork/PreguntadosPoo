@@ -6,8 +6,7 @@
 #include <iostream>
 using namespace std;
 
-VerRanking::VerRanking() {
-	cout<<"XD1"<<endl;
+VerRanking::VerRanking() : partiditaPa("x") {
 	//Pasar del txt al struct los campeones
 	ifstream archi("Campeones.txt");
 	if(archi.is_open()){
@@ -18,7 +17,7 @@ VerRanking::VerRanking() {
 		getline(archi,champions.player3);
 		getline(archi,champions.puntos3);
 	}else{
-		cout<<"No lo tenes abierto pa"<<endl;
+		cout<<"No lo tenes abierto"<<endl;
 	};
 	archi.close();
 	//Fondo de Pantalla ranking
@@ -32,9 +31,7 @@ VerRanking::VerRanking() {
 	float scaleX = anchoPantalla/tamFondo.width;
 	float scaleY = altoPantalla/tamFondo.height;
 	Sprite_Principal.scale(scaleX, scaleY);
-	cout<<"XD2"<<endl;
 	//Textode los jugadores en el ranking y sus puntos
-	cout<<champions.player1<<endl;
 	string aux  = champions.player1;
 	primeroRAnking.setString(aux);
 	Fuentecita.loadFromFile("LibreBaskerville-Regular.ttf");
@@ -96,47 +93,7 @@ VerRanking::VerRanking() {
 	relojin.restart();
 }
 
-//Funcion para comparar los puntos del nuevo jugador y los campeones
-bool VerRanking::EnteroComparar(string campeonpts, int pts){
-	stringstream cambiador;
-	cambiador<<campeonpts<<endl;
-	int championpts;
-	cambiador>>championpts;
-	return championpts<pts;
-	
-}
-
 void VerRanking::Actualizar (Juego & J, RenderWindow &ventanita) {
-	//Ver si el nuevo jugador entra en el ranking
-	if(EnteroComparar(champions.puntos1,partiditaPa.verPuntosJugador())){
-		champions.player1=partiditaPa.verNombreUsuario();
-		champions.puntos1=partiditaPa.verPuntosJugador();
-	}else{
-		if(EnteroComparar(champions.puntos2,partiditaPa.verPuntosJugador())){
-			champions.player2=partiditaPa.verNombreUsuario();
-			champions.puntos2=partiditaPa.verPuntosJugador();
-		}else{
-			if(EnteroComparar(champions.puntos3,partiditaPa.verPuntosJugador())){
-				champions.player3=partiditaPa.verNombreUsuario();
-				champions.puntos3=partiditaPa.verPuntosJugador();
-			}
-		}
-	}
-	
-	//Pasar de nuevo los campeones al txt
-	ofstream archi("Campeones.txt");
-	if(archi.is_open()){
-	archi.clear();
-	archi<<champions.player1<<endl;
-	archi<<champions.puntos1<<endl;
-	archi<<champions.player2<<endl;
-	archi<<champions.puntos2<<endl;
-	archi<<champions.player3<<endl;
-	archi<<champions.puntos3<<endl;
-	}else{
-		cout<<"No esta abierto pa"<<endl;
-	}
-	archi.close();
 	if(Keyboard::isKeyPressed(Keyboard::Escape) and relojin.getElapsedTime().asSeconds() > 0.5){
 		J.Cambiar_Escena(new Menu);
 	}

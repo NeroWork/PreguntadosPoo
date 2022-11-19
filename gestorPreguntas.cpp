@@ -9,7 +9,7 @@
 #include <iterator>
 using namespace std;
 
-gestorPreguntas::gestorPreguntas() {
+gestorPreguntas::gestorPreguntas() : cantidad_preguntas(99){
 	string preguntaNro, pregunta, opcionA, opcionB, opcionC, opcionD, opcionE, respuesta;
 	ifstream archi("poolPreguntas.txt");
 	structDePreguntas aux;
@@ -38,47 +38,50 @@ gestorPreguntas::gestorPreguntas() {
 
 void gestorPreguntas::tirarPreguntaAleatoria ( ) {
 	srand(time(NULL));
-	int nroEntre1Y99 = (rand()%99) + 1;
+	int cont_aux = 0;
+	int nroEntre1Y99 = (rand()%cantidad_preguntas) + 1;
+	cout << "Numero random: " << nroEntre1Y99 << endl;
 	posicion_Pregunta=nroEntre1Y99;
-	for (auto x : listaDePreguntas){
-		if(x.getNroPregunta() == nroEntre1Y99){
-			x.coutTodo();
+	list<structDePreguntas>::iterator itaux;
+	for (list<structDePreguntas>::iterator it = listaDePreguntas.begin(); it != listaDePreguntas.end(); it++){
+		cont_aux++;
+		if( cont_aux == nroEntre1Y99){
+			pregunta_Actual = (*it);
+			pregunta_Actual.coutTodo();
+			itaux = it;
 		}
 	}
+	listaDePreguntas.erase(itaux);
+	cantidad_preguntas--;
+	cout << "Cantidad de preguntas: " << cantidad_preguntas << endl;
+	cout << "Largo de la lista: " << listaDePreguntas.size() << endl;
 }
 
 string gestorPreguntas::tirar_OpcionA(){
-	auto it=listaDePreguntas.begin();
-	advance(it,posicion_Pregunta);
-	return it->verOpcionA();
+	return pregunta_Actual.verOpcionA();
 }
 
 string gestorPreguntas::tirar_OpcionB(){
-	auto it=listaDePreguntas.begin();
-	advance(it,posicion_Pregunta);
-	return it->verOpcionB();
+	return pregunta_Actual.verOpcionB();
 }
 
 string gestorPreguntas::tirar_OpcionC(){
-	auto it=listaDePreguntas.begin();
-	advance(it,posicion_Pregunta);
-	return it->verOpcionC();
+	return pregunta_Actual.verOpcionC();
 }
 
 string gestorPreguntas::tirar_OpcionD(){
-	auto it=listaDePreguntas.begin();
-	advance(it,posicion_Pregunta);
-	return it->verOpcionD();
+	return pregunta_Actual.verOpcionD();
 }
 
 string gestorPreguntas::tirar_OpcionE(){
-	auto it=listaDePreguntas.begin();
-	advance(it,posicion_Pregunta);
-	return it->verOpcionE();
+	return pregunta_Actual.verOpcionE();
 }
 
 string gestorPreguntas::tirar_Respuesta(){
-	auto it=listaDePreguntas.begin();
-	advance(it,posicion_Pregunta);
-	return it->verRespuesta();
+	return pregunta_Actual.verRespuesta();
 }
+
+structDePreguntas gestorPreguntas::getPreguntaActual ( ) {
+	return pregunta_Actual;
+}
+

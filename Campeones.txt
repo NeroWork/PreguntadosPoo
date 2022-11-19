@@ -1,6 +1,6 @@
-Player1
-10
-Player2
-30
+Nero
+2
+Andres
+2
 Player3
-20
+0

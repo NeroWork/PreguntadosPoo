@@ -39,7 +39,7 @@ D) Angelino Medoro
 E) Anhy Medoro 
 Rpta.: "C"  
 PREGUNTA 6: 
-El autor de la novela "Cinco Esquinas" es el escritor… 
+El autor de la novela "Cinco Esquinas" es el escritor...
 A) Mario Vargas Llosa. 
 B) Abraham Valdelomar. 
 C) Jose Eduardo Eielson. 
@@ -80,7 +80,7 @@ E) Jose Gabriel Condorcanqui
 Rpta.: "E"
 PREGUNTA 11: 
 ¿Cuales fueron las mayores figuras politicas durante la segunda guerra mundial? 
-A) Margaret Thatcher, Adolf Hitler, Vladimir Putin, Mussolini, El Principe Rainiero 
+A) Margaret Thatcher, Adolf Hitler, Mussolini, El Principe Rainiero 
 B) Roseu, Churchill, Lenin, Hitler, Mussolini, Hirohito. 
 C) Franco, Mussolini, Churchill, Zar Nicolas II, Adolf Hitler. 
 D) Franco, Mao Ze tung, Churchill, Zar Nicolas I,  Peter Huld 
@@ -159,7 +159,7 @@ D) Jorico, Fonico y Dorintio.
 E) Dorico, jonico y corintio.
 Rpta.: "E"
 PREGUNTA 21: 
-La teoria de la relatividad incluye tanto a la teoria de la relatividad especial como la de relatividad general, formuladas a principios del siglo XX, pretendian resolver la incompatibilidad existente entre la mecanica newtoniana y el electromagnetismo. Fue formulada por: 
+La teoria de la relatividad fue formulada por: 
 A) Isaac Newton 
 B) Arthur Eddington 
 C) Albert Einstein 
@@ -327,7 +327,7 @@ D) Alejandro Dumas
 E) Victor Hugo 
 Rpta.: "E" 
 PREGUNTA 42: 
-El analfabeto es aquel que no sabe leer y tampoco puede escribir, pero, actualmente, aquellos que no manejan paquetes informaticos a nivel usuario (office), son conocidos como: 
+Aquellos que no manejan paquetes informaticos a nivel usuario (office), son conocidos como: 
 A) Analfabeto funcional. 
 B) Indigente cibernetico. 
 C) Pobreza de WEB. 
@@ -377,7 +377,7 @@ Rpta.: "E"
 PREGUNTA 48: 
 ¿Cuando surgio el Renacimiento? 
 A) Durante los siglos XV y XVI 
-B) Durante los siglos XV y XVI 
+B) Durante los siglos XV y XVIII 
 C) Durante los siglos XVI y XVII 
 D) Durante los siglos XIII y XIV 
 E) Durante los siglos XIX y XXI  
@@ -543,7 +543,7 @@ D) Asesinato del Papa Francisco I
 E) Asesinato del Archiduque Austriaco Francisco Fernando 
 Rpta.: "E"
 PREGUNTA 69: 
-La Revolucion Francesa fue un proceso social y politico que se desarrollo en Francia entre 1789 y 1799, cuyas principales consecuencias fueron la abolicion de la monarquia absoluta y la proclamacion de la Republica. Lo anterior significa que la Revolucion Francesa: 
+Las consecuencias de la Revolucion Francesa fueron la abolicion de la monarquia absoluta y la proclamacion de la Republica. Por lo tanto: 
 A) Defendio la existencia de derechos restringidos a los subditos. 
 B) Promovio la independencia de los Estados Unidos. 
 C) Fomento la difusion de los principios socialistas. 
@@ -576,11 +576,11 @@ E) Teoria del espacio vital.
 Rpta.: "E" 
 PREGUNTA 73: 
 En la segunda guerra mundial, que paises formaron las "fuerzas aliadas". 
-A) EE.UU. – Francia – España – Rusia. 
-B) Inglaterra – Rusia – EE.UU. – Italia. 
-C) Francia – EE.UU. – Inglaterra – Rusia. 
-D) Rusia – Francia – Italia – Inglaterra. 
-E) Francia – EE.UU. – Italia – Canada
+A) EE.UU. - Francia - España - Rusia. 
+B) Inglaterra - Rusia - EE.UU. - Italia. 
+C) Francia - EE.UU. - Inglaterra - Rusia. 
+D) Rusia - Francia - Italia - Inglaterra. 
+E) Francia - EE.UU. - Italia - Canada
 Rpta.: "C" 
 PREGUNTA 74: 
 Es un periodo historico de la Cultura Romana 

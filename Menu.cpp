@@ -4,6 +4,7 @@
 #include "VerRanking.h"
 #include "Manito.h"
 #include <iostream>
+#include "Menu_nuevo_juego.h"
 using namespace std;
 
 Menu::Menu() {
@@ -79,7 +80,7 @@ void Menu::Actualizar (Juego & J, RenderWindow &ventanita) {
 		
 		//Si presionas el texto Iniciar Partida te vas a una nueva partida;
 		if(textoIniciarPartida.getGlobalBounds().intersects(posicion_manito)){
-		J.Cambiar_Escena(new VerRanking);
+		J.Cambiar_Escena(new Menu_nuevo_juego);
 		}
 		
 		//Si presionas el texto Ver Ranking te vas a ver el ranking;
@@ -91,6 +92,7 @@ void Menu::Actualizar (Juego & J, RenderWindow &ventanita) {
 	//Si precionas escape se cierra la ventana;
 	if(Keyboard::isKeyPressed(Keyboard::Escape) and relojin.getElapsedTime().asSeconds() > 0.5 ){
 		ventanita.close();
+		relojin.restart();
 	}
 }
 
