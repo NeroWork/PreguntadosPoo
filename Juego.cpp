@@ -1,5 +1,7 @@
 #include "Juego.h"
 #include <SFML/Window/Event.hpp>
+#include <iostream>
+using namespace std;
 
 Juego::Juego(Escena *EscenaInicio) : ventanita(VideoMode((*((VideoMode::getFullscreenModes()).begin())).width,(*((VideoMode::getFullscreenModes()).begin())).height),"PreguntadosPoo", Style::Fullscreen) {
 	ventanita.setFramerateLimit(60);
@@ -14,8 +16,9 @@ void Juego::Cambiar_Escena (Escena * Escena_nueva) {
 
 void Juego::Jugar ( ) {
 	while(ventanita.isOpen()){
+		
 		Event e;
-		while(ventanita.pollEvent(e)){
+		if(ventanita.pollEvent(e)){
 			if(e.type == Event::Closed){
 				ventanita.close();
 			}
@@ -23,8 +26,8 @@ void Juego::Jugar ( ) {
 		
 		ventanita.clear(Color(255,255,255,255));
 		
-		esc_actual -> Actualizar(*this, ventanita);
 		esc_actual -> Dibujar(ventanita);
+		esc_actual -> Actualizar(*this, ventanita);
 		w_manito.dibujar(ventanita);
 		w_manito.Mover_por_mouse(ventanita);
 		

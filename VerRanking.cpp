@@ -6,7 +6,7 @@
 #include <iostream>
 using namespace std;
 
-VerRanking::VerRanking() {
+VerRanking::VerRanking() : partiditaPa("x") {
 	//Pasar del txt al struct los campeones
 	ifstream archi("Campeones.txt");
 	if(archi.is_open()){

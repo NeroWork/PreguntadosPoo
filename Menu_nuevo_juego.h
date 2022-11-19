@@ -10,6 +10,8 @@
 #include <SFML/System/Clock.hpp>
 #include "Juego.h"
 #include <SFML/Graphics/RenderWindow.hpp>
+#include <string>
+using namespace std;
 
 class Menu_nuevo_juego : public Escena{
 	Texture Fondo_Principal, t_Presentador;
@@ -19,6 +21,9 @@ class Menu_nuevo_juego : public Escena{
 	FloatRect m_r_textin;
 	Manito menu_manito;
 	Clock relojin;
+	Event e;
+	float altoPantalla, anchoPantalla, textinHeight;
+	string texto_aux;
 public:
 	Menu_nuevo_juego();
 	void Actualizar (Juego &J, RenderWindow &ventanita);
