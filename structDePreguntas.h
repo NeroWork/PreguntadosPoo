@@ -31,6 +31,7 @@ public:
 	string verOpcionD();
 	string verOpcionE();
 	string verRespuesta();
+	string verPregunta();
 };
 
 #endif

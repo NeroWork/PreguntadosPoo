@@ -12,6 +12,7 @@ private:
 	//cosas del fondo;
 	Texture Fondo_Principal;
 	Sprite Sprite_Principal;
+	float anchoPantalla, altoPantalla;
 	
 	//textos del menu;
 	Text tiempo;
@@ -22,9 +23,18 @@ private:
 	Manito menu_manito;
 	Clock relojin, relojin_aux;
 	
+	//Texto Opciones;
+	Text Opcion1;
+	Text Opcion2;
+	Text Opcion3;
+	Text Opcion4;
+	Text Opcion5;
+	Text Pregunta_text;
+	
 	//extras
 	string nombre_Usuario;
-	gestorPreguntas listita_Preguntas;
+	gestorPreguntas gp;
+	structDePreguntas preguntaActual;
 	Text textito;
 	int cantidad_Correctas=0;
 public:
@@ -32,6 +42,9 @@ public:
 	void Actualizar (Juego & J, RenderWindow & ventanita);
 	void Dibujar (RenderWindow & ventanita);
 	int verPuntosJugador();
+	void inicializarPregunta();
+	void OrdenarOpciones();
+	void wrapear();
 	string verNombreUsuario();
 };
 

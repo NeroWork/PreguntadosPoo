@@ -92,6 +92,7 @@ void Menu::Actualizar (Juego & J, RenderWindow &ventanita) {
 	//Si precionas escape se cierra la ventana;
 	if(Keyboard::isKeyPressed(Keyboard::Escape) and relojin.getElapsedTime().asSeconds() > 0.5 ){
 		ventanita.close();
+		relojin.restart();
 	}
 }
 
