@@ -1,6 +1,6 @@
 Nero
-2
+8
 Andres
 2
-Player3
-0
+NO
+2
