@@ -136,6 +136,11 @@ void Partida::Actualizar (Juego & J, RenderWindow & ventanita) {
 		}
 	}
 	
+	if(Keyboard::isKeyPressed(Keyboard::H) and relojin.getElapsedTime().asSeconds() > 0.5){
+		this->PreguntaExacta(37);
+		relojin.restart();
+	}
+	
 	//Si presionas escape volves al menu;
 	if(Keyboard::isKeyPressed(Keyboard::Escape) and relojin.getElapsedTime().asSeconds() > 0.5){
 		J.Cambiar_Escena(new Menu);

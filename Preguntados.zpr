@@ -50,7 +50,7 @@ cursor=112:0
 open=true
 [source]
 path=Partida.cpp
-cursor=136:2
+cursor=139:25
 open=true
 [source]
 path=Menu_nuevo_juego.cpp
