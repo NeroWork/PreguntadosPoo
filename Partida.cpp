@@ -212,13 +212,17 @@ void Partida::OrdenarOpciones ( ) {
 	Pregunta_text.setPosition(anchoPantalla/8,altoPantalla/8);
 }
 
+//Salto de linea
 void Partida::wrapear (){
+	//Encontrar limite
 	float tam_rec = anchoPantalla/1.25;
 	cout << "Limite tamanio: " << tam_rec << endl;
 	string aux = Pregunta_text.getString();
 	Vector2f vec_aux;
 	bool encontrado = false;
 	size_t pos_aux = 0;
+	
+	//Guardar posicion adelantada
 	for(int i=0;i<aux.length();i++) {
 		vec_aux = Pregunta_text.findCharacterPos(i);
 		if(vec_aux.x >= tam_rec and !encontrado){
@@ -230,22 +234,25 @@ void Partida::wrapear (){
 	}
 	
 	if(encontrado == true){
-//		size_t pos_new = aux.find(" ",pos_aux);
 		size_t pos_new = 0;
 		size_t pos_mayor = 0;
+		//guardar espacio anterior al quiebre
 		while(pos_mayor < pos_aux){
 			pos_new = pos_mayor;
 			pos_mayor = aux.find(" ", pos_new+1);
 			cout << "pos_mayor: " << pos_mayor << endl;
 		}
+		//borrar espacio y hacer salto de linea
 		cout << "pos new : " << pos_new << endl;
 		aux = aux.erase(pos_new,1);
 		aux.insert(pos_new,"\n");
 		cout << "texto modificado: " << aux << endl;
+		//Acomodar el texto
 		Pregunta_text.setString(aux);
 		m_r_textin = Pregunta_text.getLocalBounds();
 		Pregunta_text.setOrigin(0,m_r_textin.height/2);
 		Pregunta_text.setPosition(anchoPantalla/8,altoPantalla/8);
+		//Buscar nuevo quiebre
 		this->wrapear();
 	}
 }
