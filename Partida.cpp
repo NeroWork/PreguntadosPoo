@@ -288,19 +288,19 @@ bool Partida::EnteroComparar(string campeonpts, int pts){
 void Partida::Perder ( ) {
 	//Ver si el nuevo jugador entra en el ranking
 	if(EnteroComparar(champions.puntos1,cantidad_Correctas)){
-		champions.player1=nombre_Usuario;
-		champions.puntos1=text_cant_correctas.getString();
-		champions.player2=champions.player1;
-		champions.puntos2=champions.puntos1;
 		champions.player3=champions.player2;
 		champions.puntos3=champions.puntos2;
+		champions.player2=champions.player1;
+		champions.puntos2=champions.puntos1;
+		champions.player1=nombre_Usuario;
+		champions.puntos1=text_cant_correctas.getString();
 		
 	}else{
 		if(EnteroComparar(champions.puntos2,cantidad_Correctas)){
-			champions.player2=nombre_Usuario;
-			champions.puntos2=text_cant_correctas.getString();
 			champions.player3=champions.player2;
 			champions.puntos3=champions.puntos2;
+			champions.player2=nombre_Usuario;
+			champions.puntos2=text_cant_correctas.getString();
 		}else{
 			if(EnteroComparar(champions.puntos3,cantidad_Correctas)){
 				champions.player3=nombre_Usuario;

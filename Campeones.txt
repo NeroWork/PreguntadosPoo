@@ -1,6 +1,6 @@
+LEONARDIUM
+10
 Nero
 8
-Andres
-2
-NO
-2
+Nero
+8
