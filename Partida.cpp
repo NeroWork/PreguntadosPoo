@@ -275,6 +275,14 @@ void Partida::nuevaPregunta () {
 	tiempo.setString("20");
 }
 
+void Partida::PreguntaExacta(int num){
+	gp.tirarPreguntaParticular(num);
+	preguntaActual = gp.getPreguntaActual();
+	this->OrdenarOpciones();
+	this->wrapear();
+	tiempo.setString("20");
+}
+
 //Funcion para comparar los puntos del nuevo jugador y los campeones
 bool Partida::EnteroComparar(string campeonpts, int pts){
 	stringstream cambiador;

@@ -57,6 +57,7 @@ public:
 	void OrdenarOpciones();
 	void wrapear();
 	void nuevaPregunta();
+	void PreguntaExacta(int num);
 	void Perder();
 	bool EnteroComparar(string campeonpts, int pts);
 	void elegirOpcion(string OpcionElegida);

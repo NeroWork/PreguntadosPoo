@@ -85,3 +85,18 @@ structDePreguntas gestorPreguntas::getPreguntaActual ( ) {
 	return pregunta_Actual;
 }
 
+
+void gestorPreguntas::tirarPreguntaParticular (int num) {
+	bool Encontrado = false;
+	for (list<structDePreguntas>::iterator it = listaDePreguntas.begin(); it != listaDePreguntas.end(); it++){
+		if( (*it).getNroPregunta() == num){
+			pregunta_Actual = (*it);
+			pregunta_Actual.coutTodo();
+			Encontrado = true;
+		}
+	}
+	if(!Encontrado){
+		pregunta_Actual=(*listaDePreguntas.begin());
+	}
+}
+

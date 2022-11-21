@@ -13,6 +13,7 @@ class gestorPreguntas {
 public:
 	gestorPreguntas();
 	void tirarPreguntaAleatoria();
+	void tirarPreguntaParticular(int num);
 	string tirar_OpcionA();
 	string tirar_OpcionB();
 	string tirar_OpcionC();
