@@ -10,7 +10,7 @@
 using namespace std;
 
 Partida::Partida(string nombreUsuario) :  nombre_Usuario(nombreUsuario){
-	//Fondo de Pantalla Menu
+	//Fondo de Pantalla Partida
 	Fondo_Principal.loadFromFile("partida.jpg");
 	Sprite_Principal.setTexture(Fondo_Principal);
 	Sprite_Principal.setPosition(0, 0);
@@ -296,10 +296,17 @@ bool Partida::EnteroComparar(string campeonpts, int pts){
 void Partida::Perder ( ) {
 	//Ver si el nuevo jugador entra en el ranking
 	if(EnteroComparar(champions.puntos1,cantidad_Correctas)){
+		champions.player3=champions.player2;
+		champions.puntos3=champions.puntos2;
+		champions.player2=champions.player1;
+		champions.puntos2=champions.puntos1;
 		champions.player1=nombre_Usuario;
 		champions.puntos1=text_cant_correctas.getString();
+		
 	}else{
 		if(EnteroComparar(champions.puntos2,cantidad_Correctas)){
+			champions.player3=champions.player2;
+			champions.puntos3=champions.puntos2;
 			champions.player2=nombre_Usuario;
 			champions.puntos2=text_cant_correctas.getString();
 		}else{
