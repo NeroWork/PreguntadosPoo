@@ -79,6 +79,7 @@ string structDePreguntas::corregir (string x) {
 	size_t posaux = x.find("Ã±");
 	if(posaux != string::npos){
 		x.replace(posaux,2,"ñ");
+		x = this->corregir(x);
 	}
 	return x;
 }
