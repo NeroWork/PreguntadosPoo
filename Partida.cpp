@@ -41,7 +41,7 @@ Partida::Partida(string nombreUsuario) :  nombre_Usuario(nombreUsuario){
 	Fuentecita.loadFromFile("LibreBaskerville-Regular.ttf");
 	tiempo.setFont(Fuentecita);
 	tiempo.setCharacterSize(60);
-	tiempo.setFillColor(Color(255,108,18,255));
+	tiempo.setFillColor(Color(0,255,240,255));
 	m_r_textin = tiempo.getLocalBounds();
 	tiempo.setOrigin(m_r_textin.width/2,m_r_textin.height/2);
 	tiempo.setPosition(anchoPantalla/1.05,altoPantalla/60);
@@ -50,7 +50,7 @@ Partida::Partida(string nombreUsuario) :  nombre_Usuario(nombreUsuario){
 	text_vidas.setString("3");
 	text_vidas.setFont(Fuentecita);
 	text_vidas.setCharacterSize(60);
-	text_vidas.setFillColor(Color(255,108,18,255));
+	text_vidas.setFillColor(Color(255,0,0,255));
 	m_r_textin = text_vidas.getLocalBounds();
 	text_vidas.setOrigin(m_r_textin.width/2,m_r_textin.height/2);
 	text_vidas.setPosition(anchoPantalla/1.05,altoPantalla/8);
@@ -59,7 +59,7 @@ Partida::Partida(string nombreUsuario) :  nombre_Usuario(nombreUsuario){
 	text_cant_correctas.setString("0");
 	text_cant_correctas.setFont(Fuentecita);
 	text_cant_correctas.setCharacterSize(60);
-	text_cant_correctas.setFillColor(Color(255,108,18,255));
+	text_cant_correctas.setFillColor(Color(70,255,0,255));
 	m_r_textin = text_cant_correctas.getLocalBounds();
 	text_cant_correctas.setOrigin(m_r_textin.width/2,m_r_textin.height/2);
 	text_cant_correctas.setPosition(anchoPantalla/1.05,altoPantalla/4);
@@ -75,10 +75,12 @@ Partida::Partida(string nombreUsuario) :  nombre_Usuario(nombreUsuario){
 }
 
 void Partida::Actualizar (Juego & J, RenderWindow & ventanita) {
+	//Si pierde, que el juego cambie al menu principal
 	if(derrotado){
 		J.Cambiar_Escena(new Menu);
 	}
 	
+	//Detectar en que opcion hace click
 	if(Mouse::isButtonPressed(Mouse::Left) and relojin.getElapsedTime().asSeconds() > 1){
 		
 		Vector2i posicion_mouse=Mouse::getPosition(ventanita);
@@ -207,13 +209,17 @@ void Partida::OrdenarOpciones ( ) {
 	Pregunta_text.setPosition(anchoPantalla/8,altoPantalla/8);
 }
 
+//Salto de linea
 void Partida::wrapear (){
+	//Encontrar limite
 	float tam_rec = anchoPantalla/1.25;
 	cout << "Limite tamanio: " << tam_rec << endl;
 	string aux = Pregunta_text.getString();
 	Vector2f vec_aux;
 	bool encontrado = false;
 	size_t pos_aux = 0;
+	
+	//Guardar posicion adelantada
 	for(int i=0;i<aux.length();i++) {
 		vec_aux = Pregunta_text.findCharacterPos(i);
 		if(vec_aux.x >= tam_rec and !encontrado){
@@ -225,28 +231,32 @@ void Partida::wrapear (){
 	}
 	
 	if(encontrado == true){
-//		size_t pos_new = aux.find(" ",pos_aux);
 		size_t pos_new = 0;
 		size_t pos_mayor = 0;
+		//guardar espacio anterior al quiebre
 		while(pos_mayor < pos_aux){
 			pos_new = pos_mayor;
 			pos_mayor = aux.find(" ", pos_new+1);
 			cout << "pos_mayor: " << pos_mayor << endl;
 		}
+		//borrar espacio y hacer salto de linea
 		cout << "pos new : " << pos_new << endl;
 		aux = aux.erase(pos_new,1);
 		aux.insert(pos_new,"\n");
 		cout << "texto modificado: " << aux << endl;
+		//Acomodar el texto
 		Pregunta_text.setString(aux);
 		m_r_textin = Pregunta_text.getLocalBounds();
 		Pregunta_text.setOrigin(0,m_r_textin.height/2);
 		Pregunta_text.setPosition(anchoPantalla/8,altoPantalla/8);
+		//Buscar nuevo quiebre
 		this->wrapear();
 	}
 }
 
 void Partida::elegirOpcion (string OpcionElegida) {
 	if(OpcionElegida==gp.tirar_Respuesta()){
+		//Actualiza la cantidad de correctas
 		cantidad_Correctas++;
 		int auxint = cantidad_Correctas;
 		stringstream ss;
@@ -255,12 +265,14 @@ void Partida::elegirOpcion (string OpcionElegida) {
 		ss >> aux;
 		text_cant_correctas.setString(aux);
 	} else {
+		//Actualiza las vidas restantes
 		vidas--;
 		stringstream ss;
 		ss << vidas;
 		string aux;
 		ss >> aux;
 		text_vidas.setString(aux);
+		//Si tiene 0 o menos pierde
 		if (vidas <= 0){
 			this->Perder();
 		}
@@ -270,6 +282,14 @@ void Partida::elegirOpcion (string OpcionElegida) {
 
 void Partida::nuevaPregunta () {
 	this->inicializarPregunta();
+	this->OrdenarOpciones();
+	this->wrapear();
+	tiempo.setString("20");
+}
+
+void Partida::PreguntaExacta(int num){
+	gp.tirarPreguntaParticular(num);
+	preguntaActual = gp.getPreguntaActual();
 	this->OrdenarOpciones();
 	this->wrapear();
 	tiempo.setString("20");
@@ -338,5 +358,4 @@ void Partida::Dibujar (RenderWindow & ventanita) {
 	ventanita.draw(Pregunta_text);
 	ventanita.draw(text_vidas);
 	ventanita.draw(text_cant_correctas);
-	
 }
