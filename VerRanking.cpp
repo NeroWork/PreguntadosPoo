@@ -59,7 +59,7 @@ VerRanking::VerRanking() : partiditaPa("x") {
 	segundoRanking.setFillColor(Color(145,0,123,255));
 	m_r_textin = segundoRanking.getLocalBounds();
 	segundoRanking.setOrigin(m_r_textin.width/2,m_r_textin.height/2);
-	segundoRanking.setPosition(anchoPantalla/1.8,altoPantalla/1.75);
+	segundoRanking.setPosition(anchoPantalla/1.95,altoPantalla/1.85);
 	relojin.restart();
 	
 	segundoPuntos.setString(champions.puntos2);
@@ -68,7 +68,7 @@ VerRanking::VerRanking() : partiditaPa("x") {
 	segundoPuntos.setFillColor(Color(145,0,123,255));
 	m_r_textin = segundoPuntos.getLocalBounds();
 	segundoPuntos.setOrigin(m_r_textin.width/2,m_r_textin.height/2);
-	segundoPuntos.setPosition(anchoPantalla/1.45,altoPantalla/1.75);
+	segundoPuntos.setPosition(anchoPantalla/1.445,altoPantalla/1.8);
 	relojin.restart();
 
 	terceroRanking.setString(champions.player3);
@@ -77,7 +77,7 @@ VerRanking::VerRanking() : partiditaPa("x") {
 	terceroRanking.setFillColor(Color(145,0,123,255));
 	m_r_textin = terceroRanking.getLocalBounds();
 	terceroRanking.setOrigin(m_r_textin.width/2,m_r_textin.height/2);
-	terceroRanking.setPosition(anchoPantalla/1.8,altoPantalla/1.25);
+	terceroRanking.setPosition(anchoPantalla/1.95,altoPantalla/1.30);
 	relojin.restart();
 	
 	
@@ -88,7 +88,7 @@ VerRanking::VerRanking() : partiditaPa("x") {
 	terceroPuntos.setFillColor(Color(145,0,123,255));
 	m_r_textin = terceroPuntos.getLocalBounds();
 	terceroPuntos.setOrigin(m_r_textin.width/2,m_r_textin.height/2);
-	terceroPuntos.setPosition(anchoPantalla/1.45,altoPantalla/1.25);
+	terceroPuntos.setPosition(anchoPantalla/1.445,altoPantalla/1.25);
 	
 	relojin.restart();
 }

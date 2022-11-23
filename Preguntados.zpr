@@ -15,7 +15,7 @@ tab_width=4
 tab_use_spaces=0
 explorer_path=.
 inherits_from=
-current_source=Partida.cpp
+current_source=VerRanking.cpp
 path_char=\
 [source]
 path=main.cpp
@@ -45,7 +45,7 @@ path=Menu.cpp
 cursor=73:57
 [source]
 path=VerRanking.cpp
-cursor=112:0
+cursor=79:64
 open=true
 [source]
 path=Partida.cpp
