@@ -10,12 +10,15 @@
 using namespace std;
 
 gestorPreguntas::gestorPreguntas() : cantidad_preguntas(99){
+	//Creo variables auxiliares
 	string preguntaNro, pregunta, opcionA, opcionB, opcionC, opcionD, opcionE, respuesta;
 	ifstream archi("poolPreguntas.txt");
 	structDePreguntas aux;
+	//mientras haya preguntas con opciones
 	while(getline(archi, preguntaNro) && getline(archi, pregunta) && getline(archi, opcionA)
 	&& getline(archi, opcionB) && getline(archi, opcionC) && getline(archi, opcionD)
 	&& getline(archi, opcionE) && getline(archi, respuesta)){
+		//guardo los datos
 		stringstream ssAux;
 		int nroaux=0;
 		size_t sizeaux = preguntaNro.find(":");
@@ -37,12 +40,14 @@ gestorPreguntas::gestorPreguntas() : cantidad_preguntas(99){
 
 
 void gestorPreguntas::tirarPreguntaAleatoria ( ) {
+	//Creo un numero random
 	srand(time(NULL));
 	int cont_aux = 0;
 	int nroEntre1Y99 = (rand()%cantidad_preguntas) + 1;
 	cout << "Numero random: " << nroEntre1Y99 << endl;
 	posicion_Pregunta=nroEntre1Y99;
 	list<structDePreguntas>::iterator itaux;
+	//Busco esa pregunta entre las de la lista
 	for (list<structDePreguntas>::iterator it = listaDePreguntas.begin(); it != listaDePreguntas.end(); it++){
 		cont_aux++;
 		if( cont_aux == nroEntre1Y99){
@@ -85,7 +90,7 @@ structDePreguntas gestorPreguntas::getPreguntaActual ( ) {
 	return pregunta_Actual;
 }
 
-
+//Esta funcion es solo para testear cosas, no tiene utilidad real dentro del juego;
 void gestorPreguntas::tirarPreguntaParticular (int num) {
 	bool Encontrado = false;
 	for (list<structDePreguntas>::iterator it = listaDePreguntas.begin(); it != listaDePreguntas.end(); it++){
