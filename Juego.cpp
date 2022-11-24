@@ -7,6 +7,8 @@ Juego::Juego(Escena *EscenaInicio) : ventanita(VideoMode((*((VideoMode::getFulls
 	ventanita.setFramerateLimit(60);
 	esc_actual = EscenaInicio;
 	ventanita.setMouseCursorVisible(false);
+	icon.loadFromFile("icon.png");
+	ventanita.setIcon(icon.getSize().x,icon.getSize().y,icon.getPixelsPtr());
 }
 
 

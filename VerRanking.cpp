@@ -40,7 +40,7 @@ VerRanking::VerRanking() : partiditaPa("x") {
 	primeroRAnking.setFillColor(Color(145,0,123,255));
 	m_r_textin = primeroRAnking.getLocalBounds();
 	primeroRAnking.setOrigin(m_r_textin.width/2,m_r_textin.height/2);
-	primeroRAnking.setPosition(anchoPantalla/1.95,altoPantalla/3.45);
+	primeroRAnking.setPosition(anchoPantalla/1.95,altoPantalla/3.58);
 	relojin.restart();
 	
 	aux = champions.puntos1;
@@ -50,7 +50,7 @@ VerRanking::VerRanking() : partiditaPa("x") {
 	primeroPuntos.setFillColor(Color(145,0,123,255));
 	m_r_textin = primeroPuntos.getLocalBounds();
 	primeroPuntos.setOrigin(m_r_textin.width/2,m_r_textin.height/2);
-	primeroPuntos.setPosition(anchoPantalla/1.445,altoPantalla/3.275);
+	primeroPuntos.setPosition(anchoPantalla/1.44,altoPantalla/3.38);
 	relojin.restart();
 	
 	segundoRanking.setString(champions.player2);

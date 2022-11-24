@@ -8,6 +8,7 @@ class Juego {
 	Escena *esc_actual, *esc_siguiente = nullptr;
 	RenderWindow ventanita;
 	Manito w_manito;
+	Image icon;
 friend class Menu;
 public:
 	Juego(Escena *EscenaInicio);
