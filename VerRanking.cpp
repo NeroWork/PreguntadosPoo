@@ -68,7 +68,7 @@ VerRanking::VerRanking() : partiditaPa("x") {
 	segundoPuntos.setFillColor(Color(145,0,123,255));
 	m_r_textin = segundoPuntos.getLocalBounds();
 	segundoPuntos.setOrigin(m_r_textin.width/2,m_r_textin.height/2);
-	segundoPuntos.setPosition(anchoPantalla/1.445,altoPantalla/1.8);
+	segundoPuntos.setPosition(anchoPantalla/1.445,altoPantalla/1.822);
 	relojin.restart();
 
 	terceroRanking.setString(champions.player3);
@@ -77,7 +77,7 @@ VerRanking::VerRanking() : partiditaPa("x") {
 	terceroRanking.setFillColor(Color(145,0,123,255));
 	m_r_textin = terceroRanking.getLocalBounds();
 	terceroRanking.setOrigin(m_r_textin.width/2,m_r_textin.height/2);
-	terceroRanking.setPosition(anchoPantalla/1.95,altoPantalla/1.30);
+	terceroRanking.setPosition(anchoPantalla/1.955,altoPantalla/1.275);
 	relojin.restart();
 	
 	

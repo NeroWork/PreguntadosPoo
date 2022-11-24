@@ -47,7 +47,7 @@ path=Menu.cpp
 cursor=73:57
 [source]
 path=VerRanking.cpp
-cursor=79:64
+cursor=65:35
 open=true
 [source]
 path=Partida.cpp
