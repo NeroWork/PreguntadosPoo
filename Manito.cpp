@@ -9,6 +9,7 @@ Manito::Manito() {
 }
 
 void Manito::Mover_por_mouse(RenderWindow &ventanita){
+	//Pregunta la posicion del mouse y mueve el sprite a esa posicion;
 	Vector2f Posicion_mouse=Vector2f(Mouse::getPosition(ventanita));
 	s_manito.setPosition(Posicion_mouse);
 }
