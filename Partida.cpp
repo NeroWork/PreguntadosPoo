@@ -14,6 +14,7 @@ Partida::Partida(string nombreUsuario) :  nombre_Usuario(nombreUsuario){
 	Fondo_Principal.loadFromFile("partida.jpg");
 	Sprite_Principal.setTexture(Fondo_Principal);
 	Sprite_Principal.setPosition(0, 0);
+	
 	//Calculo que tanto debo escalar la imagen para que cubra toda la pantalla
 	FloatRect tamFondo = Sprite_Principal.getLocalBounds();
 	anchoPantalla = (*((VideoMode::getFullscreenModes()).begin())).width;
@@ -145,14 +146,17 @@ void Partida::Actualizar (Juego & J, RenderWindow & ventanita) {
 	}
 }
 
+//Ver los puntos del jugador
 int Partida::verPuntosJugador(){
 	return cantidad_Correctas;
 }
 
+//Ver el nombre del jugador
 string Partida::verNombreUsuario(){
 	return nombre_Usuario;
 }
 
+//Tomar una pregunta de la pool
 void Partida::inicializarPregunta ( ) {
 	gp.tirarPreguntaAleatoria();
 	preguntaActual = gp.getPreguntaActual();
@@ -280,6 +284,7 @@ void Partida::elegirOpcion (string OpcionElegida) {
 	this->nuevaPregunta();
 }
 
+//Buscar nueva pregunta
 void Partida::nuevaPregunta () {
 	this->inicializarPregunta();
 	this->OrdenarOpciones();
@@ -287,6 +292,7 @@ void Partida::nuevaPregunta () {
 	tiempo.setString("20");
 }
 
+//Buscar una pregunta en particular
 void Partida::PreguntaExacta(int num){
 	gp.tirarPreguntaParticular(num);
 	preguntaActual = gp.getPreguntaActual();
@@ -347,6 +353,7 @@ void Partida::Perder ( ) {
 	derrotado=true;
 }
 
+//Dibujar todo lo de la partida
 void Partida::Dibujar (RenderWindow & ventanita) {
 	ventanita.draw(Sprite_Principal);
 	ventanita.draw(tiempo);

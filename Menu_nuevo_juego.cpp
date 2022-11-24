@@ -6,10 +6,11 @@
 using namespace std;
 
 Menu_nuevo_juego::Menu_nuevo_juego() {
-	//Fondo de Pantalla Menu
+	//Fondo de Pantalla para colocar el nombre del jugador
 	Fondo_Principal.loadFromFile("nuevo_juego.jpg");
 	Sprite_Principal.setTexture(Fondo_Principal);
 	Sprite_Principal.setPosition(0, 0);
+	
 	//Calculo que tanto debo escalar la imagen para que cubra toda la pantalla
 	FloatRect tamFondo = Sprite_Principal.getLocalBounds();
 	anchoPantalla = (*((VideoMode::getFullscreenModes()).begin())).width;
@@ -48,11 +49,13 @@ Menu_nuevo_juego::Menu_nuevo_juego() {
 	textoLeo2.setPosition(anchoPantalla/2,altoPantalla/2.68);
 }
 
-
+//Es el actualizar del Menu_nuevo_juego
 void Menu_nuevo_juego::Actualizar (Juego & J, RenderWindow & ventanita) {
 	Event e;
+	/*Se cambio el segundo while que recibia los eventos, ya que este causaba
+	errores al momento de escribir el nombre del ususario*/
 	while(ventanita.pollEvent(e)){
-		cout << "xd" << endl;
+		
 		if(e.type == Event::TextEntered){
 			if(e.text.unicode == 8){
 				if(texto_aux.length()>0){
@@ -85,6 +88,7 @@ void Menu_nuevo_juego::Actualizar (Juego & J, RenderWindow & ventanita) {
 	}
 }
 
+//Dibujo todo lo del Menu_nuevo_juego
 void Menu_nuevo_juego::Dibujar (RenderWindow & ventanita) {
 	ventanita.draw(Sprite_Principal);
 	ventanita.draw(textoLeo1);

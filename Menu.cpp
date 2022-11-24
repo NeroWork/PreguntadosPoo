@@ -12,6 +12,7 @@ Menu::Menu() {
 	Fondo_Principal.loadFromFile("fondo169_1920_1080.png");
 	Sprite_Principal.setTexture(Fondo_Principal);
 	Sprite_Principal.setPosition(0, 0);
+	
 	//Calculo que tanto debo escalar la imagen para que cubra toda la pantalla
 	FloatRect tamFondo = Sprite_Principal.getLocalBounds();
 	float anchoPantalla = (*((VideoMode::getFullscreenModes()).begin())).width;

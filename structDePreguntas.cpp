@@ -6,7 +6,7 @@ structDePreguntas::structDePreguntas() {
 	
 }
 
-
+//Gaurdar el numero, la pregunta, las opciones y la respuesta de la pregunta
 void structDePreguntas::agregarNroPregunta (int nro) {
 	nroPregunta = nro;
 }
@@ -39,6 +39,7 @@ void structDePreguntas::agregarOpcionE (string x) {
 	OpcionE = x;
 }
 
+//Mostrar toda la pregunta y corregirla para que aparezcan las ñ y los ?
 void structDePreguntas::coutTodo ( ) {
 	cout << nroPregunta << endl;
 
@@ -70,11 +71,13 @@ void structDePreguntas::coutTodo ( ) {
 	cout << Respuesta << endl;
 }
 
+//Mostrar el numero de la pregunta
 int structDePreguntas::getNroPregunta ( ) {
 	return nroPregunta;
 }
 
 
+//Funcion para corregir la pregunta
 string structDePreguntas::corregir (string x) {
 	size_t posaux = x.find("Ã±");
 	if(posaux != string::npos){
@@ -84,6 +87,7 @@ string structDePreguntas::corregir (string x) {
 	return x;
 }
 
+//Mostrar las opciones y la respuesta
 string structDePreguntas::verOpcionA(){
 	return OpcionA;
 }

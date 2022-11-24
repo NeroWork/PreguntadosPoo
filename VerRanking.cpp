@@ -31,6 +31,7 @@ VerRanking::VerRanking() : partiditaPa("x") {
 	float scaleX = anchoPantalla/tamFondo.width;
 	float scaleY = altoPantalla/tamFondo.height;
 	Sprite_Principal.scale(scaleX, scaleY);
+	
 	//Textode los jugadores en el ranking y sus puntos
 	string aux  = champions.player1;
 	primeroRAnking.setString(aux);
@@ -90,9 +91,11 @@ VerRanking::VerRanking() : partiditaPa("x") {
 	terceroPuntos.setOrigin(m_r_textin.width/2,m_r_textin.height/2);
 	terceroPuntos.setPosition(anchoPantalla/1.445,altoPantalla/1.25);
 	
+	//Restaurar el reloj
 	relojin.restart();
 }
 
+//Si aprieta el escape vuelve a la pantalla del menu
 void VerRanking::Actualizar (Juego & J, RenderWindow &ventanita) {
 	if(Keyboard::isKeyPressed(Keyboard::Escape) and relojin.getElapsedTime().asSeconds() > 0.5){
 		J.Cambiar_Escena(new Menu);
