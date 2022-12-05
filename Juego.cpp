@@ -1,12 +1,20 @@
 #include "Juego.h"
 #include <SFML/Window/Event.hpp>
 #include <iostream>
+#include <SFML/Audio/Music.hpp>
 using namespace std;
 
 Juego::Juego(Escena *EscenaInicio) : ventanita(VideoMode((*((VideoMode::getFullscreenModes()).begin())).width,(*((VideoMode::getFullscreenModes()).begin())).height),"PreguntadosPoo", Style::Fullscreen) {
 	ventanita.setFramerateLimit(60);
 	esc_actual = EscenaInicio;
 	ventanita.setMouseCursorVisible(false);
+
+	if(!musiquin.openFromFile("Musiquin.wav")){
+		cout<<"No se puede cargar la musica"<<endl;
+	}
+	musiquin.setVolume(20);
+	musiquin.setLoop(true);
+	musiquin.play();
 }
 
 
@@ -20,6 +28,7 @@ void Juego::Jugar ( ) {
 		Event e;
 		if(ventanita.pollEvent(e)){
 			if(e.type == Event::Closed){
+				musiquin.stop();
 				ventanita.close();
 			}
 		}

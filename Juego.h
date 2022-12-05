@@ -3,11 +3,13 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 #include "Escena.h"
 #include "Manito.h"
+#include <SFML/Audio/Music.hpp>
 
 class Juego {
 	Escena *esc_actual, *esc_siguiente = nullptr;
 	RenderWindow ventanita;
 	Manito w_manito;
+	Music musiquin;
 friend class Menu;
 public:
 	Juego(Escena *EscenaInicio);

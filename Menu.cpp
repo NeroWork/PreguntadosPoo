@@ -67,6 +67,7 @@ Menu::Menu() {
 	s_Presentador.scale(600/anchoPantalla,600/anchoPantalla);
 	
 	
+	
 	//Inicio reloj;
 	relojin.restart();
 }
